@@ -1,0 +1,79 @@
+html
+    {
+     font-size: 62.5%;
+    }
+body 
+    {
+    font-size: 16px;
+    }
+/*ESTO ME PERMITE CONSEGUIR 10PX = 1 REM
+SIN ESO 16PX = 1REM*/
+
+h1{
+    color: white;
+    background-color: rgba(248, 102, 102, 0.65);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 35px;
+    margin-bottom: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4.5rem
+    
+    
+}
+ a{
+    color: ;
+ }
+
+ .h5azul{
+    color: white;
+    background-color: blue;
+}
+
+#projo {
+    color: white;
+    background-color: red;
+}
+
+/* .seccionprueba h3{
+    color: white;
+    background-color: green;
+}
+/*SELECTO DE CLASE*/
+/* .hola {
+    color: red;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+/*sELECTOR DE CLASE*/
+/* #adios {
+    color: red;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+} */
+/*SELECTOR ELEMENTO*/
+/* h6 {
+    color: blue;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+} */
+
+/* .ejercicioselectores p{
+    color: green;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+[src="IMG/ico-EMAIL (1).png"] {
+    background-color: blue;
+}
+
+.ejercicioselectores > a{
+color: red;
+} 
+/* body{
+    background-color: white;
+} */
