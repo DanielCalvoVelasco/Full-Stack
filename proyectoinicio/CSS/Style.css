@@ -1,16 +1,804 @@
-html
-    {
-     font-size: 62.5%;
-    }
-body 
-    {
+/* PARA AÑADIR VARIABLES */
+:root {
+    --colorPrincipal: rgba(248, 102, 102, 1);
+    /* #F76666; */
+    --colorSecundario: #02052F;
+    --fuentePrincipal: 'Open Sans', sans-serif;
+    --fuenteBotones: "DinBold", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
     font-size: 16px;
+    /* background-color: var(--colorPrincipal); */
+    font-family: var(--fuentePrincipal);
+    /* background-image:linear-gradient(to top, red 0%, blue 50%); */
+ 
+/* background: -moz-linear-gradient(left, rgba(248,65,48,1) 0%, rgba(241,101,91,1) 50%, rgba(246,25,14,1) 51%, rgba(240,36,25,1) 71%, rgba(231,42,39,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,65,48,1)), color-stop(50%, rgba(241,101,91,1)), color-stop(51%, rgba(246,25,14,1)), color-stop(71%, rgba(240,36,25,1)), color-stop(100%, rgba(231,42,39,1)));
+background: -webkit-linear-gradient(left, rgba(248,65,48,1) 0%, rgba(241,101,91,1) 50%, rgba(246,25,14,1) 51%, rgba(240,36,25,1) 71%, rgba(231,42,39,1) 100%);
+background: -o-linear-gradient(left, rgba(248,65,48,1) 0%, rgba(241,101,91,1) 50%, rgba(246,25,14,1) 51%, rgba(240,36,25,1) 71%, rgba(231,42,39,1) 100%);
+background: -ms-linear-gradient(left, rgba(248,65,48,1) 0%, rgba(241,101,91,1) 50%, rgba(246,25,14,1) 51%, rgba(240,36,25,1) 71%, rgba(231,42,39,1) 100%);
+background: linear-gradient(to right, rgba(248,65,48,1) 0%, rgba(241,101,91,1) 50%, rgba(246,25,14,1) 51%, rgba(240,36,25,1) 71%, rgba(231,42,39,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f84130', endColorstr='#e72a27', GradientType=1 ); */
+}
+
+body {
+    margin: 0;
+}
+
+/* EJEMPLO MEDIA QUERIES */
+/* @media (min-width: 900px) {
+    body{
+        background-color: yellow;
     }
+} 
+@media (max-width: 700px) {
+    body{
+        background-color: blue;
+    }
+} */
+/* .ejerciciocolor {
+    color: var(--colorPrincipal);
+} */
+
+
+
 /*ESTO ME PERMITE CONSEGUIR 10PX = 1 REM
 SIN ESO 16PX = 1REM*/
 
-h1{
+/* ESTILOS GENERICOS */
+
+.contenedor {
+    max-width: 88%;
+    margin: 0 auto;
+    /* margin: 0 auto 0 auto; */
+    /* margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+}
+
+@media (min-width:1140px) {
+    .contenedor {
+        max-width: 88%;
+        margin: 0 auto;
+        /* margin: 0 auto 0 auto; */
+        /* margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto; */
+    }
+}
+
+@media (max-width: 1140px) and (min-width: 768px) {
+    .contenedor {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:768px) {
+    .contenedor {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* ESTILOS PARA EL MAIN  */
+.fondoMain {
+    background-image: url(../IMG/11641893944_banner_zona_centro.png);
+    background-size: cover;
+    background-position: top left;
+    padding: 80px 0 180px 0;
+}
+
+.margenDerecho {
+    margin-right: 33%;
+}
+
+@media (max-width:1140px) {
+    .margenDerecho {
+        margin-right: 0;
+    }
+}
+
+h1 {
+    background-color: rgba(248, 102, 102, 0.65);
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    padding: 35px;
     color: white;
+
+}
+
+/* PSEUDOELEMENTOS */
+/* h1::after{
+    content: "Texto con pseudoelemento";
+} */
+
+.fondoMain a {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 24px 94px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--fuenteBotones);
+    font-size: 1.4rem;
+    font-weight: 700;
+
+}
+
+@media (max-width:768px) {
+    .fondoMain a {
+        padding: 24px 70px;
+    }
+
+}
+
+.flexMain {
+    display: flex;
+    flex-direction: row;
+    /*POR DEFECTO ES ROW*/
+    justify-content: space-between;
+}
+
+.flexMain img {
+    margin-right: 10px;
+}
+
+
+
+/* ESTILOS PARA LA IMAGEN DE CORPORACIONES */
+.logos {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -120px;
+    border-radius: 12px;
+
+}
+
+@media (max-width:1140px) and (min-width:768px) {
+    .logos {
+        padding: 20px 40px;
+    }
+
+    [src="https://www.tucarreradigital.es/assets/img/Logos-oficiales.png"] {
+        max-width: 70%;
+        /* margin: 0px 40px; */
+    }
+
+    [src="./IMG/Logo-Adecco (1).png"] {
+        max-width: 30%;
+        /* margin: 0px 40px; */
+    }
+}
+
+@media (max-width:768px) {
+    .logos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logos img {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+}
+
+/* ESTILOS SECCIÓN CURSOS */
+.seccionCursos h3 {
+    text-align: center;
+    color: rgba(248, 102, 102, 0.65);
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin: 40px 0;
+    padding-bottom: 40px;
+}
+
+.seccionCursos>h2 {
+    margin-bottom: 72px;
+    color: #02052F;
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.botonesCursos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 105px;
+
+}
+
+.botonVerTodo {
+    background-color: var(--colorPrincipal);
+    color: white;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    padding: 10px 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border: 1px solid var(--colorPrincipal)
+}
+
+.botonMadrid {
+    background-color: white;
+    color: #02052F;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border: 1px solid var(--colorPrincipal)
+}
+
+.cursosOfertados {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width:768px) {
+    .cursosOfertados {
+        flex-direction: column;
+    }
+}
+
+
+.cursosOfertados>div {
+    flex: 2;
+    max-width: 50%;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+}
+
+@media (max-width:1140px) and (min-width:768px) {
+    .cursosOfertados>div {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width:768px) {
+    .cursosOfertados>div {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+}
+
+.marketingDigital {
+    background-image: url(../IMG/Curso-marketing-digital-centro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 15px;
+}
+
+.videojuegos {
+    background-image: url(../IMG/Curso-programacion-videojuegos-centro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 15px;
+}
+
+.cursosOfertados div h2 {
+    color: white;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cursosOfertados a {
+    color: var(--colorPrincipal);
+    font-size: 1.4rem;
+    background-color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 20px 60px;
+    display: inline-block;
+}
+
+/* ESTILOS SECCIÓN PÍDENOSLO */
+.lugar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.lugar h3 {
+    color: #02052F;
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.lugar a {
+    background-color: var(--colorPrincipal);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 96px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pidenoslo {
+    display: flex;
+    justify-content: center;
+}
+
+/* ESTILO SECCIÓN VÍDEO */
+.video {
+    justify-content: center;
+    display: flex;
+
+}
+
+@media (max-width:1140px) {
+    .video iframe {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+@media (max-width:768px) {
+    .video iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* ESTILO SECCIÓN PARA QUIEN SON ESTOS CURSOS */
+.seccionParaQuien {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width:1140px) {
+    .seccionParaQuien {
+        flex-direction: column;
+    }
+}
+
+.seccionParaQuien>div {
+    flex: 1;
+    max-width: 50%;
+}
+
+@media (max-width:1140px) {
+    .seccionParaQuien>div {
+        flex: 1;
+        max-width: 100%;
+    }
+
+}
+
+.seccionParaQuien h3 {
+    color: var(--colorPrincipal);
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.seccionParaQuien h2 {
+    font-family: var(--fuentePrincipal);
+    color: var(--colorSecundario);
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.parquienizquierda {
+    margin-right: 15px;
+}
+
+
+.seccionParaQuien p {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: var(--colorSecundario);
+}
+
+.seccionParaQuien span {
+    font-weight: 800;
+}
+
+.paraquienizquierda h4 {
+    font-family: var(--fuentePrincipal);
+    color: var(--colorSecundario);
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+.paraquienizquierda a {
+    color: var(--colorPrincipal);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.paraquienizquierda h5 {
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--colorSecundario);
+    margin-bottom: 25px;
+}
+
+.paraquienizquierda .botonInfografia {
+    background-color: var(--colorPrincipal);
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+    display: inline-block;
+}
+
+.paraquienderecha {
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+    padding-top: 60px;
+}
+
+.paraquienderechasuperior {
+    background-color: var(--colorPrincipal);
+    padding: 50px 30px;
+}
+
+.paraquienderechasuperior h5 {
+    font-family: var(--fuentePrincipal);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.paraquienderechasuperior .destacarAzul {
+    color: var(--colorSecundario);
+}
+
+.paraquienderechasuperior span {
+    color: black;
+}
+
+.paraquienderechainferior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -60px;
+}
+
+.paraquienderechainferior img {
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.paraquienderechainferior h4 {
+    background-color: black;
+    color: white;
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+    padding: 40px 30px;
+    width: 250px;
+    text-align: start;
+}
+
+.paraquienderechainferior h4 span {
+    color: var(--colorPrincipal);
+}
+
+/* ESTILOS LOCALIZACIONES*/
+.localizaciones {
+    background-color: black;
+    padding: 100px 0px;
+
+}
+
+/* .localizaciones .contenedor {
+    display: flex;
+} */
+.localizaciones .contenedor{
+    display: grid;
+    grid: 1fr/repeat(4,1fr);
+}
+@media (max-width:768px) {
+    .localizaciones .contenedor{
+        flex-wrap: wrap;
+        width: 100%;
+}
+}
+.localizaciones .contenedor div {
+    /* width: 25%; */
+    padding: 24px 15px;
+    margin: 0;
+    color: white;
+}
+@media (max-width:1140px) {
+    .localizaciones .contenedor div {
+        width: 50%;
+}
+}
+@media (max-width:768px) {
+    .localizaciones .contenedor div {
+        flex-wrap: wrap;
+        width: 100%;
+}
+}
+.localizaciones h2 {
+    color: white;
+    font-size: 27px;
+    font-weight: 700px;
+    font-family: var(--fuenteBotones);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+
+/* ESTILOS CONTACTAR */
+.Contacto {
+    background-color: var(--colorPrincipal);
+    padding-top: 90px;
+    padding-bottom: 130px;
+}
+
+.Contacto .contenedor>h3 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 22px;
+    font-weight: 300;
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+}
+
+.Contacto .contenedor>h2 {
+    color: white;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.ContactoCuadros {
+    display: flex;
+    flex-direction: row;
+}
+
+.ContactoCuadros img {
+    margin-right: 15px;
+}
+
+.cuadro1 {
+    display: flex;
+    background-color: white;
+    margin-right: 15px;
+    border-radius: 0.55rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.cuadro2 {
+    background-color: white;
+    margin-left: 15px;
+    border-radius: 0.55rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+@media (max-width:1140px) {
+    .ContactoCuadros{
+        flex-direction: column;
+    }
+    .cuadro1, .cuadro2{
+        max-width: 100%;
+        margin: 10px 0px;
+    }
+    .ContactoCuadros img{
+        height: 60px;
+    }
+    }
+/* ESTILOS footer */
+.seccionfooter {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+
+.enlacefooter {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(25, 69, 132, 1);
+}
+
+.enlacefooter a {
+    font-size: var(--fuentePrincipal);
+    color: var(--colorSecundario);
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-right: 80px;
+    line-height: 1.2;
+    text-decoration: underline
+}
+
+.paginaslegales {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(25, 69, 132, 1);
+}
+
+.paginaslegales a {
+    font-size: var(--fuentePrincipal);
+    color: var(--colorSecundario);
+    font-size: 1.7rem;
+    margin-right: 80px;
+}
+
+.enlace1 {
+    margin-right: 30px;
+}
+
+.paginaslegales a {
+    margin-right: 50px;
+    color: #02052F;
+    text-decoration: underline;
+    font-size: 1.4rem;
+}
+
+/* ESTILOS header */
+.seccionHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.seccionEnlaces {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.seccionLogin {
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.seccionLogin a {
+
+    color: var(--colorPrincipal);
+    font-family: var(--fuentePrincipal);
+    margin-left: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.seccionLogin a:hover {
+    text-decoration: underline;
+}
+
+
+.seccionNav a {
+    color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+    margin-left: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.7rem;
+    display: inline-block;
+}
+
+.seccionNav a:hover {
+    text-decoration: underline;
+}
+
+.botonInformate {
+    background-color: var(--colorPrincipal);
+    padding: 0.6rem 1.5rem;
+    border-radius: 4rem;
+    color: white !important;
+}
+
+.botonInformate:hover {
+    background-color: var(--colorSecundario);
+    text-decoration: none !important;
+}
+
+.seccionImagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+
+
+/* h1 {
+    box-sizing: border-box;
+    color: white;
+    background-color: #F76666;
+    margin-bottom: 10px;
+    padding: 35px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    display: block;
+    font-weight: 800;
+    font-size: 4.5rem;
+    line-height: 1.2;
+    margin-top: 0%;
+} */
+/* h1{
+    color: var(--colorPrincipal);
     background-color: rgba(248, 102, 102, 0.65);
     text-align: center;
     text-transform: uppercase;
@@ -20,10 +808,10 @@ h1{
     font-size: 4.5rem
     
     
-}
- 
+} */
 
- .h5azul{
+
+.h5azul {
     color: white;
     background-color: blue;
 }

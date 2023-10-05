@@ -1,0 +1,259 @@
+/* EJERCICIO CADENA DESCENDENTE Y TODOS LOS HIJOS */
+.cadenadescendente h2 {
+    background-color: blue;
+    height: 100px;
+}
+
+.todosloshijos>div>div>h2 {
+    background-color: blue;
+    height: 100px;
+}
+
+/* EJERCICO DIFERENCIA ENTRE PADDING Y MARGING */
+.margin {
+    height: 200px;
+    background-color: yellow;
+    margin: 50px;
+}
+
+.padding {
+    height: 200px;
+    background-color: yellow;
+    padding: 50px;
+}
+
+/* EJERCICIO DISPLAYS INLINE Y BLOCK */
+.secciondisplay p {
+    background-color: red;
+
+}
+
+.secciondisplay a {
+    background-color: purple;
+
+}
+
+.secciondisplay h1 {
+    background-color: blue;
+
+}
+
+.secciondisplay h3 {
+    background-color: yellow;
+
+}
+
+.secciondisplay h6 {
+    background-color: green;
+
+}
+
+.secciondisplay div {
+    background-color: orangered;
+
+}
+
+.ejercicio2 p {
+    background-color: red;
+    display: inline;
+}
+
+.ejercicio2 a {
+    background-color: purple;
+    display: block;
+}
+
+.ejercicio2 h1 {
+    background-color: blue;
+    display: inline;
+}
+
+.ejercicio2 h3 {
+    background-color: yellow;
+    display: inline;
+}
+
+.ejercicio2 h6 {
+    background-color: green;
+    display: inline;
+}
+
+.ejercicio2 div {
+    background-color: orangered;
+    display: inline;
+}
+
+/* EJERCICIO JUSTIFY-CONTENT Y ALIGN ITEMS */
+
+.flexRow {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.flexColumn {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+/* EJERCICIO REPASO FLEX 03/10 */
+.repasoFlex1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.parrafo1 {
+    width: 20%;
+    background-color: aqua;
+}
+
+.parrafo2 {
+    width: 30%;
+    background-color: blueviolet;
+}
+
+.parrafo3 {
+    width: 50%;
+    background-color: red;
+}
+
+/* EJERCICO REPASO FLEX2 03/10 */
+
+.repasoFlex2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.column1 {
+    height: 100px;
+    background-color: green;
+}
+
+.column2 {
+    height: 200px;
+    background-color: yellow;
+}
+
+/* EJERCICIO REPASO FLEX3 03/10 */
+.repasoFlex3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.fila1 {
+    width: 40%;
+    background-color: orange;
+}
+
+.fila2 {
+    width: 60%;
+    background-color: purple;
+    display: flex;
+    flex-direction: row;
+}
+
+.p1 {
+    width: 30%;
+}
+
+.p2 {
+    width: 70%;
+}
+
+.ejqueries {
+    height: 500px;
+}
+
+@media (min-width: 1138px) {
+    .ejqueries {
+        background-color: brown;
+    }
+}
+
+@media (max-width:1138px) and (min-width:933px) {
+    .ejqueries {
+        background-color: yellow;
+    }
+
+}
+
+@media (max-width:933px) and (min-width:616px) {
+    .ejqueries {
+        background-color: blue;
+    }
+}
+
+@media (max-width:616px) and (min-width:360px) {
+    .ejqueries {
+        background-color: red;
+    }
+}
+
+@media (max-width:360px) {
+    .ejqueries {
+        background-color: green;
+    }
+}
+
+.ejercicioAR {
+    height: 500px;
+    background-color: blue;
+    position: relative;
+}
+
+.ejercicioAR div {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    box-shadow: 200px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.ejerciciogrid div{
+border: 1px solid black;
+}
+.ejerciciogrid{
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    grid-template-rows: 200px 100px;
+}
+
+.ejerciciogrid1 div{
+    border: 1px solid black;
+}
+.ejerciciogrid1{
+    display: grid;
+    grid-template-columns: 80% 100px;
+    grid-template-rows: 50px 300px 100px 200px;
+}
+.ejerciciogrid2 div{
+    border: 1px solid black;
+}
+.ejerciciogrid2{
+    display: grid;
+    height: 500px;
+    grid-template-columns: 100fr 300fr 200fr 150fr;
+    grid-template-rows: 5fr 15fr 16fr 7fr;
+}
+
+.ejercicioRepeat div{
+    border: 1px solid black;
+}
+.ejercicioRepeat{
+height: 300px;
+display: grid;
+grid: 1fr 1fr/ 2fr 2fr;
+gap: 20px;
+}
+/* GRID-TEMPLATE-COLUMNS: 50% 50%; ES IGUAL QUE PONER 1FR 1FR */
